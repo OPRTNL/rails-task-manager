@@ -1,0 +1,16 @@
+<%= @task.title %>
+<br>
+<%= @task.details %>
+  <p><% if @task.completed == true %>
+   <input type='checkbox' checked disabled="">
+   <% else %>
+   <input type='checkbox' disabled>
+  <% end %>
+  <br>
+  <%= link_to "Delete", destroy_path(@task),
+      method: :delete,
+      data: { confirm: "Are you sure?" } %>
+
+    <%= link_to 'Edit task', edit_path %>
+  </p>
+

@@ -1,0 +1,15 @@
+<form action="/tasks" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <label for="title">Title: </label>
+  <input type="text" name="task[title]" id="title">
+
+  <label for="details">Address: </label>
+  <input type="text" name="task[details]" id="details">
+
+  <label for="completed">completed: </label>
+  <input type='checkbox' name="task[completed]" value="completed">
+
+  <input type="submit">
+</form>
+
+<%= link_to 'back to list', tasks_path %>
